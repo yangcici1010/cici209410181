@@ -4,9 +4,13 @@
     box-sizing: border-box;
 }
 
+
+
 body{
-    background-color: burlywood;
-    font-size: 16px;
+    background-color: rgb(114, 62,40);
+    font-size: 25px;
+    font-family: 'Sansita Swashed', cursive;
+    text-align: center;
 }
 
 #container {
