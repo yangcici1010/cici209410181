@@ -1,11 +1,64 @@
-function changeVideo(index) {
-    const p=document.getElementById('video-container');
-    console.log('video-container', p);
-    switch (index) {
-        case 1: p.innerHTML='<iframe width="560" height="315" src="https://www.oxxostudio.tw/articles/201501/css-flexbox.html" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' break;
-        case 2: p.innerHTML='<iframe width="560" height="315" src="https://www.youtube.com/embed/MRWX49Furew" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' break;
-        case 3: p.innerHTML='<iframe width="560" height="315" src="https://www.youtube.com/embed/METhdbL_iMw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' break;
-        case 4: p.innerHTML='<iframe width="560" height="315" src="https://www.youtube.com/embed/ZyDbq-lEKTo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' break;
-        case 5: p.innerHTML='<iframe width="560" height="315" src="https://www.youtube.com/embed/NlsrJbVvjaA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' break;
-    }
-}
+                 html {
+             height: 100%;
+             overflow-y: hidden;
+         }
+         
+         body {
+             margin: 0;
+             height: 100%;
+             display: flex;
+             flex-direction: column;
+             background-color: black;
+             flex: 1;
+         }
+         
+         .part2 {
+             margin: 0;
+             flex: 1;
+         }
+         
+         .part1 {
+             margin: 0;
+             background-size: cover;
+             background-position: center bottom;
+             background-image: url("./images/v2_8.png");
+             flex: 0.3;
+         }
+         
+         .part1 li {
+             display: inline;
+         }
+         
+         h2 {
+             padding-top: 30px;
+             padding-bottom: 0px;
+             text-align: center;
+             font-size: 2.5rem;
+             color: #FFFFFF;
+         }
+         
+         .footer {
+             flex: 0.3;
+             height: 400px;
+             background-size: cover;
+             background-position: center bottom;
+             background-image: url("./images/v2_8.png");
+         }
+         
+         #video-container {
+             position: relative;
+             margin-left: 20%;
+         }
+         
+         #main {
+             text-align: center;
+         }
+         
+         @media(max-width:500px) {
+             body {
+                 grid-template-columns: repeat(1, 1fr);
+             }
+             @media(max-width:700px) {
+                 body {
+                     grid-template-columns: repeat(2, 1fr);
+                 }
